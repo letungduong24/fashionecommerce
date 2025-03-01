@@ -45,7 +45,6 @@ const Checkout = () => {
     address2: '',
     address3: '',
     city: '',
-    phone: '',
   })
 
   const handleCheckout = (e) => {

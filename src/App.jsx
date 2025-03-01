@@ -10,6 +10,10 @@ import ProductsDetails from "./components/Products/ProductsDetails"
 import Checkout from "./components/Cart/Checkout"
 import OrderConfirmation from "./pages/OrderConfirmation"
 import OrderDetails from "./pages/OrderDetails"
+import AdminLayout from "./components/Admin/AdminLayout"
+import AdminHome from "./pages/AdminHome"
+import UserManager from "./components/Admin/UserManager"
+import OrderManager from "./components/Admin/OrderManager"
 
 function App() {
   return (
@@ -27,10 +31,11 @@ function App() {
             <Route path="order-confirmation" element={<OrderConfirmation />}></Route>
             <Route path="order/:id" element={<OrderDetails />}></Route>
           </Route>
-          <Route>
-            {/* Adminlayout */}
+          <Route path="/admin" element={<AdminLayout />}>
+            <Route index element={<AdminHome />}></Route>
+            <Route path="users" element={<UserManager />}></Route>
+            <Route path="orders" element={<OrderManager />}></Route>
           </Route>
-
         </Routes>
     </BrowserRouter>
   )

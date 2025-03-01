@@ -40,6 +40,7 @@ const Navbar = () => {
                 </Link>
             </div>
             <div className="flex items-center space-x-4">
+                <Link to='/admin' className='bg-gray-700 text-sm text-white hover:bg-gray-600 transition-all duration-300 px-2 py-1 rounded-2xl'>Admin</Link>
                 <Link to='/profile'>
                     <HiOutlineUser className='h-6 w-6 text-gray-700 flex justify-center'/>
                 </Link>
